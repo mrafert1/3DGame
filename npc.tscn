@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://kxkjtjw6qges"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_etiq1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0p58m"]
+
+[node name="npc" type="RigidBody3D"]
+lock_rotation = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("CylinderMesh_etiq1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("CylinderShape3D_0p58m")

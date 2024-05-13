@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://blrbob0bkeqbj"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_t18d6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_efai5"]
+
+[node name="enemy" type="RigidBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("SphereMesh_t18d6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("SphereShape3D_efai5")

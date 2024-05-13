@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8l7oudnmfsr4"]
+
+[ext_resource type="Script" path="res://start.gd" id="1_24mrs"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_24mrs")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 331.0
+offset_top = 53.0
+offset_right = 825.0
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 64
+text = "   Cube-Man
+3D ADVENTURE"
+
+[node name="start" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 429.0
+offset_right = 650.0
+offset_bottom = 513.0
+text = "START"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 246.0
+offset_top = 262.0
+offset_right = 888.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 24
+text = "       Collect the coin and avoid the enemy spheres. 
+     There are friendly cylinder towns folk around to
+                                       help as well!"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 533.0
+offset_right = 651.0
+offset_bottom = 616.0
+text = "END"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
